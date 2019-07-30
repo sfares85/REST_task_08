@@ -8,7 +8,7 @@ from .serializers import FlightSerializer, BookingSerializer, BookingDetailsSeri
 from .permissions import IsBookingOwner, IsChangable
 
 
-class FlightsList(ListAPIView):
+class FlightsList(ListAPIView): 
 	queryset = Flight.objects.all()
 	serializer_class = FlightSerializer
 	filter_backends = [SearchFilter, OrderingFilter]
